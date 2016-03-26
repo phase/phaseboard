@@ -1,0 +1,37 @@
+{
+  "name": "phaseboard",
+  "version": "1.0.0",
+  "description": "Board Software using Node and MySQL, modeled after Acmlmboard.",
+  "private": "true",
+  "main": "server.js",
+  "scripts": {
+    "build-css": "stylus src/style/index.styl -o static/css",
+    "watch-css": "stylus src/style/index.styl -o static/css -w",
+    "build": "npm run build-css",
+    "watch": "npm run watch-css & nodemon server -e js,jade",
+    "start": "npm run build && node server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/phase/phaseboard"
+  },
+  "keywords": [
+    "board",
+    "forum",
+    "mysql",
+    "acmlm"
+  ],
+  "author": "phase",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/phase/phaseboard/issues"
+  },
+  "homepage": "https://github.com/phase/phaseboard",
+  "dependencies": {
+    "express": "^4.13.4",
+    "jade": "^1.11.0",
+    "morgan": "^1.7.0",
+    "nodemon": "^1.9.1",
+    "stylus": "^0.54.2"
+  }
+}
