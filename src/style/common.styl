@@ -1,0 +1,871 @@
+.newMarker
+  width 2.5em!important
+  text-align center
+
+html, body
+  width 100%
+  height 100%
+
+body
+  background-color #002
+  color #FFF
+  font-family "Verdana", "Lucida Grande", sans-serif
+  font-size 1em
+  margin 0
+  overflow-y scroll
+  -ms-overflow-y scroll
+
+.highlight_green
+  background #040
+  color #dfd
+  border 1px solid #dfd
+  padding-left 2px
+  padding-right 2px
+
+.highlight_yellow
+  background #440
+  color #ffd
+  border 1px solid #ffd
+  padding-left 2px
+  padding-right 2px
+
+.highlight_red
+  background #400
+  color #fdd
+  border 1px solid #fdd
+  padding-left 2px
+  padding-right 2px
+
+#mobile-crumbs
+  margin 0 0 1em
+  img
+    height auto
+    width 100%
+  th
+    text-align left!important
+  a
+    display inline-block
+    padding-top 1em
+    padding-bottom 1em
+  button
+    line-height 2em
+    font-weight bold
+    height 3em
+    width 3em
+    &.notifs
+      background #c00
+      color white
+      border-color #f44
+
+#mobile-sidebar-container
+  position absolute
+  top 0
+  left 0
+  width 100%
+  height 100%
+  max-width 100%
+  max-height 100%
+  z-index 99998
+
+#mobile-sidebar-deactivate
+  position absolute
+  top 0
+  left 0
+  right 14em
+  height 100%
+  max-height 100%
+  z-index 99999
+
+#mobile-sidebar
+  position absolute
+  top 0
+  right 0
+  width 14em
+  height 100%
+  max-width 90%
+  max-height 100%
+  overflow scroll
+  z-index 99999
+  td
+    div
+      width 13em
+      word-wrap break-word
+    &.link
+      a
+        display block
+        padding 0.5em
+
+.mobileNotif
+  span
+    &.nobr
+      white-space normal!important
+
+#main-header, #main-footer
+  height 1px
+
+#main-sidebar
+  width 14em
+
+#main-sidebar, #main-page
+  vertical-align top
+
+h3
+  font-family "Verdana", "Lucida Grande", sans-serif
+  font-size 1.2em
+  font-weight bold
+  margin 0
+
+h4
+  font-family "Verdana", "Lucida Grande", sans-serif
+  font-size 1em
+  margin 0
+
+a
+  text-decoration none
+  font-weight bold
+  img
+    border none
+  &:link
+    color #FFC040
+  &:visited
+    color #FFC040
+  &:active
+    color #FFEA60
+  &:hover
+    color #FFF
+    span
+      color #FFF !important
+
+a, a span
+  -o-transition color .2s ease-in-out
+  -ms-transition color .2s ease-in-out
+  transition color .2s ease-in-out
+  -moz-transition color .2s ease-in-out
+  -webkit-transition color .2s ease-in-out
+
+.nobr
+  white-space nowrap
+
+table, td, tr, th, div
+  border-color black
+
+.pagelink
+  padding-left 5px
+  padding-right 5px
+  display inline-block
+
+.nc0x
+  color #888888
+
+.nc1x
+  color #888888
+
+.nc2x
+  color #888888
+
+.nc00
+  color #97ACEF
+
+.nc10
+  color #F185C9
+
+.nc20
+  color #7C60B0
+
+.nc01
+  color #D8E8FE
+
+.nc11
+  color #FFB3F3
+
+.nc21
+  color #EEB9BA
+
+.nc02
+  color #AFFABE
+
+.nc12
+  color #C762F2
+
+.nc22
+  color #47B53C
+
+.nc03
+  color #FFEA95
+
+.nc13
+  color #C53A9E
+
+.nc23
+  color #F0C413
+
+.nc04
+  color #5555FF
+
+.nc14
+  color #FF5588
+
+.nc24
+  color #FF55FF
+
+.nc05
+  color #FF0000
+
+.nc15
+  color #FF0000
+
+.nc25
+  color #FF0000
+
+.width100
+  width 100%
+
+.width75
+  width 75%
+
+.width50
+  width 50%
+
+.width25
+  width 25%
+
+.margin, .pages
+  margin-bottom .75em
+
+.smallFonts
+  font-size 0.85em !important
+
+.left
+  text-align left
+
+.right
+  text-align right
+
+table
+  color #FFF
+  border-collapse separate
+  border-spacing 0
+  width 100%
+  font-weight normal
+  &.message
+    text-align center
+  &.layout-table
+    margin 0
+    padding 0
+    border-spacing 0
+    width 100%
+    & > tbody
+      & > tr
+        & > td
+          padding 0
+  &.layout-table#main
+    height 100%
+  &.breadcrumbs
+    & > tbody
+      & > tr
+        & > th
+          padding 4px
+  &.newspost
+    margin-top 1.25em
+  &.form
+    margin-left auto
+    margin-right auto
+    max-width 1200px
+    clear both
+  &.form_quickreply
+    margin 4px auto
+    max-width 1200px
+    clear both
+  &.threadreview
+    td
+      &.post
+        vertical-align top
+  &.post
+    td
+      &.side
+        padding 2px 4px
+      &.post
+        &:not(.haslayout)
+          padding 10px
+      &.meta
+        font-size .85em
+        height 14px
+        margin 0
+        padding-right 4px
+      &.links
+        font-size .85em
+        height 14px
+        margin 0
+
+.block
+  display block
+
+.center
+  text-align center
+
+.underline
+  text-decoration underline
+
+#header-sep
+  padding 0
+  height 4px
+
+table#sidebar
+  height 100%
+  & > tbody
+    & > tr
+      & > td
+        vertical-align top
+        padding 4px
+  table
+    td
+      a
+        display block
+
+table#footer
+  & > tbody
+    & > tr
+      & > td
+        font-size 0.8em
+        text-align center
+
+table#page-container
+  height 100%
+  & > tbody
+    & > tr
+      &:last-child
+        & > td
+          &.crumb-container
+            .breadcrumbs
+              ul
+                &.dropdownMenu
+                  bottom 2em
+
+td
+  &.crumb-container
+    height 1px
+  &.contents-container
+    vertical-align top
+  &.threadIcon
+    width 20px
+    text-align center
+    font-size .8em
+    font-weight bold
+    text-shadow 1px 1px 0px #000
+  &.threadIcons
+    label
+      & > input
+        display none
+        & ~ *
+          background rgba(255, 255, 255, 0)
+          border 1px solid rgba(255, 255, 255, 0)
+          border-radius 4px
+          padding 0px 2px
+        &:checked
+          & ~ *
+            background rgba(255, 255, 255, .25)
+            border 1px solid rgba(255, 255, 255, .5)
+
+div#page_contents
+  padding 8px 10%
+  height 100%
+  & > .margin
+    &:last-child
+      margin-bottom 0
+
+#headerInfo
+  float right
+  width 300px
+  margin 4px
+  font-size 0.85em
+
+#navBar
+  font-size 1em !important
+  text-align left !important
+  padding 2px
+
+.navButton
+  display inline-block
+  padding 5px
+  margin 0 4px
+  white-space nowrap
+  & > a
+    margin -5px
+    padding 5px
+
+.navButton:hover, .dropdownContainer:hover > .navButton
+  background rgba(0,0,0,0.7)
+
+.breadcrumbs
+  .navButton
+    margin -5px 4px
+    font-size 0.85em
+
+ul
+  &.crumbLinks
+    display inline
+    list-style-type none
+    margin 0
+    padding 0
+    li
+      display inline-block
+      white-space nowrap
+      &:not(:first-child):before
+        content '\00A0\00BB\00A0'
+  &.dropdownMenu
+    list-style-type none
+    margin 3px 4px 0 4px
+    padding 0
+    display none
+    position absolute
+    cursor default
+    font-weight normal
+    li
+      margin 0
+      display block
+      border solid #888
+      border-width 0 1px 1px 1px
+      background #333
+      padding 4px
+      &:first-child
+        border-top-width 1px
+      & > a
+        display block
+        white-space nowrap
+  &.pipemenu
+    display inline
+    white-space nowrap
+    list-style-type none
+    margin 0
+    padding 0
+    li
+      display inline-block
+      &:not(:first-child):before
+        content '\00A0|\00A0'
+
+.dropdownContainer
+  display inline-block
+  cursor pointer
+  position relative
+  .navButton
+    display block
+  &:hover
+    padding-bottom 4px
+    margin-bottom -4px
+    & > ul
+      &.dropdownMenu
+        display block
+
+#notifMenuContainer > ul.dropdownMenu,
+.breadcrumbs ul.dropdownMenu
+  right 0
+
+@keyframes
+  notifAnim
+
+to
+  transform scale(2,2)
+  -webkit-transform scale(2,2)
+  background rgba(0, 0, 0, 0.5)
+  oacpty 1
+  -webkit-transform scale(1)
+
+  @-webkit-keyframes
+    notifAnim
+  #notifMenuButton
+    #notifCount
+      color white
+      text-shadow none
+      padding 0px 4px
+      border-radius 3px
+      display inline-block
+  div
+    &.overlayShade
+      div
+        &.message
+          width 50%
+          margin-left auto
+          margin-right auto
+          margin-top 4em
+          -webkit-animation-name overlayScaleIn
+          -webkit-animation-duration 0.25s
+        &.overlayContent
+          padding 16px
+
+#notifMenuButton
+  &.hasNotifs
+    #notifCount
+      background #c00
+      border 1px solid #f44
+      transform-origin center
+      animation-name notifAnim
+      animation-delay 0.5s
+      animation-duration 0.4s
+      animation-iteration-count 4
+      animation-timing-function linear
+      -webkit-transform-origin center
+      -webkit-animation-name notifAnim
+      -webkit-animation-delay 0.5s
+      -webkit-animation-duration 0.4s
+      -webkit-animation-iteration-count 4
+      -webkit-animation-timing-function linear
+  &.noNotif
+    #notifCount
+      background #777
+      border 1px solid #999
+
+table.breadcrumbs, table.breadcrumbs > tbody > tr > th
+  font-size 1em !important
+  text-align left !important
+
+table.post>tbody>tr>td, table.outline>tbody>tr>td, table.message>tbody>tr>td
+  font-size 1em
+  padding 2px 4px
+
+table.post>tbody>tr>th, table.outline>tbody>tr>th, table.message>tbody>tr>th
+  font-size 1em
+  text-align left
+
+tr.header0>th, tr.header1>th
+  text-align center!important
+  font-size .85em!important
+
+table.post, table.custompost
+  width 100%
+  margin-bottom 0.75em
+
+table.post td.side,
+table.custompost td.side,
+table.threadreview td.side
+  width 200px
+  vertical-align top
+
+table.post td.post,
+table.custompost td.post
+  vertical-align top
+  height 100px
+
+.signature
+  font-size 0.85em
+
+.post_attachment
+  display inline-block
+  border 1px solid #ccc
+  border-radius 2px
+  padding 1em
+  margin 0.5em
+
+.footer
+  text-align center
+  width 100%
+  font-size .8em
+  clear both
+  *
+    border-width 0
+  a
+    img
+      opacity .5
+      -o-transition opacity .2s ease-in-out
+      -ms-transition opacity .2s ease-in-out
+      transition opacity .2s ease-in-out
+      -moz-transition opacity .2s ease-in-out
+      -webkit-transition opacity .2s ease-in-out
+    &:hover
+      img
+        opacity 1
+
+.links
+  font-size 1em
+  text-align right
+
+.ignored
+  opacity 0.5
+
+div
+  &.quote
+    padding 4px
+    margin-top 4px
+    margin-bottom 4px
+    margin-left 50px
+    margin-right 10px
+    div
+      &.quotecontent
+        padding 4px
+        margin-top 4px
+        border-top 1px solid white
+        border-bottom 1px solid white
+      &.quoteheader
+        font-size 10px
+        font-style italic
+  &.spoiler
+    margin-left 10px
+    margin-right 10px
+    margin-top 5px
+    margin-bottom 5px
+    div
+      &.spoiled
+        background #000
+        color #FFF
+        padding 10px
+      &.hidden
+        display none
+  &.postToolbar
+    margin-bottom 1px
+    button
+      vertical-align bottom
+      width 1.85em
+      height 1.85em
+      margin-right 1px
+      padding-bottom 0.1em
+  &.overlayShade
+    background rgba(0, 0, 0, 0.5)
+    position fixed
+    width 100%
+    height 100%
+    left 0px
+    top 0px
+    -webkit-animation-name fadeIn
+    -webkit-animation-duration 1s
+    div
+      &.buttonContainer
+        text-align right
+        button
+          margin 8px
+
+.codeblock
+  white-space pre-wrap
+  font-family "Consolas", "Lucida Console", "Courier New", monospace
+  padding 4px
+  margin-left 10px
+  margin-right 10px
+  margin-top 5px
+  margin-bottom 5px
+
+form
+  margin 0
+
+.minipic
+  vertical-align top
+
+#getabetterbrowseryoulazyfuck
+  position absolute
+  left 32px
+  top 32px
+  background #CCF
+  border 4px solid red
+  color #000
+  font-size 16px
+  font-weight bold
+  padding 4px
+
+.smilies img, #rss img
+  padding 1px
+  opacity .5
+  border 1px solid rgba(255, 255, 255, 0)
+  border-radius 4px
+  -o-transition opacity .2s ease-in-out
+  -ms-transition opacity .2s ease-in-out
+  transition opacity .2s ease-in-out
+  -moz-transition opacity .2s ease-in-out
+  -webkit-transition opacity .2s ease-in-out
+
+.smilies img:hover, #rss img:hover
+  margin 0
+  opacity 1
+  background rgba(255, 255, 255, .25)
+  border 1px solid rgba(255, 255, 255, .5)
+
+input, select, textarea, button
+  font-size 1em
+
+input[disabled], button[disabled]
+  opacity .5
+
+input
+  &.color
+    background-image none!important
+
+textarea
+  font-family "Consolas", "Lucida Console", "Courier New", monospace
+  width 100%
+  box-sizing border-box
+  -moz-box-sizing border-box
+
+#body
+  margin 8px
+
+.geshi
+  color #FFF
+  .st0
+    font-style italic
+
+.geshi .kw0, .geshi .kw1, .geshi .kw2, .geshi .kw3, .geshi .kw4
+  font-weight bold
+  color #AAF
+
+.geshi .br0, .geshi .sy0
+  color #488
+
+.geshi .co1, .geshi .coMULTI
+  font-style italic
+  color #884
+
+.badge
+  border 2px solid #666
+  background #444
+  font-size 10px
+  color #FFF
+  margin 0
+  padding 0px 3px
+
+.bronze
+  border-color chocolate
+  background #946231
+
+.silver
+  border-color silver
+  background #949494
+
+.gold
+  border-color gold
+  background #E8B400
+
+.platinum
+  border-color darkgray
+  background #948e82
+
+#expandedSet, #expandedHelp
+  display none
+
+button
+  &.expander
+    font-weight bold
+    border-width 1px
+    border-style solid
+    padding 0
+    width 20px
+    margin 0
+    float right
+    &:hover
+      border 1px solid #FFF
+
+.threadTag
+  text-shadow 1px 1px 0px hsla(0, 0%, 0%, .5)
+  padding 0px 2px
+  border 1px dotted hsla(0, 0%, 100%, .75)
+  box-shadow 1px 1px 2px hsla(0, 0%, 0%, .5)
+  margin-right 2px
+
+.pollbarContainer
+  border 1px solid #669
+  margin .2em
+  border-radius 8px
+  width 75%
+  padding 1px
+
+.pollbar
+  border-width 1px
+  border-style solid
+  margin -1px
+  background silver
+  color #FFF
+  text-shadow 1px 1px 0px #000, 0px 1px 0px #000, -1px 1px 0px #000, -1px 0px 0px #000, -1px -1px 0px #000, 0px -1px 0px #000, 1px -1px 0px #000, 1px 0px 0px #000
+  border-radius 8px
+  white-space nowrap
+
+.editprofile
+  max-width 1200px
+  margin-left auto
+  margin-right auto
+
+.eptable
+  margin 0px 0px !important
+
+div#tabs
+  margin 0px 0px
+  margin-bottom -1px
+  padding 0px 0px
+  padding-left 4px
+  cursor default
+  button
+    margin 0px
+    padding-right 16px
+    &.selected
+      position static
+      z-index -100
+      border-bottom-width 0px
+
+.statusIcon
+  display inline-block
+  white-space pre
+  text-shadow 1px 1px 0px #000, 0px 1px 0px #000, -1px 1px 0px #000, -1px 0px 0px #000, -1px -1px 0px #000, 0px -1px 0px #000, 1px -1px 0px #000, 1px 0px 0px #000
+  font-weight bold
+  font-variant small-caps
+  &.new
+    color #ff4
+    &:before
+      content 'New\000A'
+  &.hot
+    color #f84
+    &:before
+      content '!\000A'
+  &.hotnew
+    color #fa4
+    &:before
+      content 'New\000A'
+  &.off
+    color #888
+    &:before
+      content '\00D7\000A'
+  &.offhot
+    color #888
+    &:before
+      content '\00D7\000A'
+  &.offhotnew
+    color #880
+    &:before
+      content '\00D7\000A'
+  &.offnew
+    color #880
+    &:before
+      content '\00D7\000A'
+  &.old
+    color #888
+    &:before
+      content 'Old\000A'
+
+div#rss
+  float right
+  margin-left 4px
+
+.themeselector input:checked + label, .fe_selected
+  outline 1px solid rgba(255, 255, 255, 0.5)
+  background rgba(0, 0, 0, 0.5)
+
+input[type="checkbox"]
+  vertical-align middle
+
+label
+  display inline-block
+
+@-webkit-keyframes
+  fadeIn
+    from
+        background rgba(0, 0, 0, 0)
+  overlayScaleIn
+    from
+        opacity 0
+    -webkit-transform scale(0.75)
+
+.postToolbar
+  cursor default
+
+code, pre, kbd
+  font-size 115%
+
+.gfxnumber
+  background url('../img/status/numbers.png')
+  width 8px
+  height 8px
+  display inline-block
+

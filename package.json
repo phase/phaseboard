@@ -5,8 +5,8 @@
   "private": "true",
   "main": "server.js",
   "scripts": {
-    "build-css": "stylus src/style/index.styl -o static/css",
-    "watch-css": "stylus src/style/index.styl -o static/css -w",
+    "build-css": "stylus src/style/common.styl -o static/css",
+    "watch-css": "stylus src/style/common.styl -o static/css -w",
     "build": "npm run build-css",
     "watch": "npm run watch-css & nodemon server -e js,jade",
     "start": "npm run build && node server"
