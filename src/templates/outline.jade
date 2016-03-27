@@ -11,7 +11,7 @@ html(lang='en')
     link#theme_css(rel='stylesheet', type='text/css', href='/themes/#{theme}/style.css')
 
   body(style='width:100%; font-size: 80%;')
-    form#logout(action='/?page=login', method='post', style='display:none;')
+    form#logout(action='/login', method='post', style='display:none;')
       input(type='hidden', name='action', value='logout')
     table#main.layout-table
       tr
@@ -39,21 +39,21 @@ html(lang='en')
               th#navBar
                 div(style='display:inline-block; float:right;')
                   span.navButton
-                    a(href='/?page=admin') Admin
+                    a(href='/admin') Admin
                   #userMenuContainer.dropdownContainer
                     #userMenuButton.navButton
-                      a(href='/?page=profile&id=1')
+                      a(href='/profile&id=1')
                         span.userlink(style='color: #5555FF;', title='#{user.name} #{user.id} [#{user.rank}]') #{user.name}
                       i.icon-caret-down
                     ul.dropdownMenu
                       li
-                        a(href='/?page=editprofile') Edit profile
+                        a(href='/editprofile') Edit profile
                       li
-                        a(href='/?page=editavatars') Mood avatars
+                        a(href='/editavatars') Mood avatars
                       li
-                        a(href='/?page=private') Private messages
+                        a(href='/private') Private messages
                       li
-                        a(href='/?page=favorites') Favorites
+                        a(href='/favorites') Favorites
                   #notifMenuContainer.dropdownContainer.noNotif
                     #notifMenuButton.navButton
                       | Notifications
@@ -66,24 +66,24 @@ html(lang='en')
                   span.navButton
                     a(href='/') Forums
                   span.navButton
-                    a(href='/?page=home') Home page
+                    a(href='/home') Home page
                   span.navButton
-                    a(href='/?page=faq') FAQ
+                    a(href='/faq') FAQ
                   span.navButton
-                    a(href='/?page=memberlist') Member list
+                    a(href='/memberlist') Member list
                   span.navButton
-                    a(href='/?page=ranks') Ranks
+                    a(href='/ranks') Ranks
                   span.navButton
-                    a(href='/?page=online') Online users
+                    a(href='/online') Online users
                   span.navButton
-                    a(href='/?page=lastposts') Last posts
+                    a(href='/lastposts') Last posts
                   span.navButton
-                    a(href='/?page=search') Search
+                    a(href='/search') Search
             tr.cell0
               td.smallFonts.center
                 #onlineUsers(style='min-height:16px;')
                   | 1 user online: 
-                  a(href='/?page=profile&id=1')
+                  a(href='/profile&id=1')
                     span.userlink(style='color: #5555FF;', title='#{user.name} #{user.id} [#{user.rank}]') #{user.name}
                 script(type='text/javascript').
                   onlineFID = 0;
@@ -98,165 +98,20 @@ html(lang='en')
                 table.outline.breadcrumbs
                   tr.header1
                     th
-                      .actionlinks(style='float:right;')
-                        ul.pipemenu.smallFonts
-                          li
-                            a(href='/?action=markallread') Mark all forums read
                       ul.crumbLinks
                         li
-                          a(href='/') Delv
+                          a(href='/') #{crumbs}
             tr
               td.contents-container
-                #page_contents
-                  table.outline.margin.boardstats
-                    tr.cell2.center(style='overflow: auto;')
-                      td.smallFonts
-                        div(style='float: left; width: 33%;')
-                          br
-                        div(style='float: right; width: 33%; text-align: right;')
-                          | 2 registered users, 2 active (100%)
-                          br
-                          | 					Newest user: 
-                          a(href='/?page=profile&id=2')
-                            span.userlink(style='color: #7C60B0;', title='#{user.name} #{user.id} [#{user.rank}]') #{user.name}
-                        .center
-                          | 1 thread and 3 posts total
-                          br
-                          | 					0 posts today, 0 last hour
-                  table.outline.margin.anncbar
-                    tr.header1
-                      th(colspan='2')
-                        | Announcement
-                    tr.cell1
-                      td.cell2.newMarker
-                      td
-                        a(href='/?page=thread&id=1') Gist Tags
-                        |   — Posted by 
-                        a(href='/?page=profile&id=1')
-                          span.userlink(style='color: #5555FF;', title='#{user.name} #{user.id} [#{user.rank}]') #{user.name}
-                        |  on 03-21-16, 09:00 pm
-                  table.outline.margin.forumlist
-                    tr.header1
-                      th  
-                      th Announcements
-                      th(style='width: 75px;') Threads
-                      th(style='width: 50px;') Posts
-                      th(style='min-width:150px; width:15%;') Last post
-                    tr.cell1
-                      td.cell2.newMarker
-                      td
-                        h4
-                          a(href='/?page=forum&id=1') Latest News
-                        span.smallFonts
-                          | New features and other news will be announced here
-                      td.center.cell2
-                        span 1
-                      td.center.cell2
-                        span 3
-                      td.center.smallFonts
-                        span
-                          | 03-22-16, 04:07 am
-                          br
-                          | 					by 
-                          a(href='/?page=profile&id=2')
-                            span.userlink(style='color: #7C60B0;', title='#{user.name} #{user.id} [#{user.rank}]') #{user.name}
-                          a(href='/?page=post&id=3') »
-                  table.outline.margin.forumlist
-                    tr.header1
-                      th  
-                      th ROM Hacking
-                      th(style='width: 75px;') Threads
-                      th(style='width: 50px;') Posts
-                      th(style='min-width:150px; width:15%;') Last post
-                    tr.cell1
-                      td.cell2.newMarker
-                      td
-                        h4
-                          a(href='/?page=forum&id=6') Reverse Engineering
-                        span.smallFonts
-                          | Documentation and research on games and software
-                      td.center.cell2
-                        span 0
-                      td.center.cell2
-                        span 0
-                      td.center.smallFonts
-                        span
-                          | —
-                    tr.cell1
-                      // <td class="cell2 newMarker"></td>
-                      td(style='padding-left:64px', colspan='2')
-                        h4
-                          a(href='/?page=forum&id=5') GBA
-                        span.smallFonts
-                          | All things Game Boy Advanced
-                      td.center.cell2
-                        span 0
-                      td.center.cell2
-                        span 0
-                      td.center.smallFonts
-                        span
-                          | —
-                    tr.cell1
-                      td.cell2.newMarker
-                      td
-                        h4
-                          a(href='/?page=forum&id=2') Tools Development
-                        span.smallFonts
-                          | Showcasing and developing tools
-                      td.center.cell2
-                        span 0
-                      td.center.cell2
-                        span 0
-                      td.center.smallFonts
-                        span
-                          | —
-                  table.outline.margin.forumlist
-                    tr.header1
-                      th  
-                      th Garbage
-                      th(style='width: 75px;') Threads
-                      th(style='width: 50px;') Posts
-                      th(style='min-width:150px; width:15%;') Last post
-                    tr.cell1
-                      td.cell2.newMarker
-                      td
-                        h4
-                          a(href='/?page=forum&id=4') Golden Scat
-                        span.smallFonts
-                          | Threads that were just too good to throw away forever
-                      td.center.cell2
-                        span 0
-                      td.center.cell2
-                        span 0
-                      td.center.smallFonts
-                        span
-                          | —
-                    tr.cell1
-                      td.cell2.newMarker
-                      td
-                        h4
-                          a(href='/?page=forum&id=3') Trash
-                        span.smallFonts
-                          | Garbage threads go here
-                      td.center.cell2
-                        span 0
-                      td.center.cell2
-                        span 0
-                      td.center.smallFonts
-                        span
-                          | —
+                #{page_contents}
             tr
               td.crumb-container
                 table.outline.breadcrumbs
                   tr.header1
                     th
-                      .actionlinks(style='float:right;')
-                        ul.pipemenu.smallFonts
-                          li
-                            a(href='/?action=markallread') Mark all forums read
                       ul.crumbLinks
                         li
-                          a(href='/') Delv
+                          a(href='/') #{crumbs}
       tr
         td#main-footer(colspan='2')
           table#footer.outline

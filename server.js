@@ -1,14 +1,15 @@
 var express = require('express')
   , logger = require('morgan')
   , app = express()
-  , template = require('jade').compileFile(__dirname + '/src/templates/outline.jade')
+  , outline = require('jade').compileFile(__dirname + '/src/templates/outline.jade')
+  , d = require('jade').compileFile(__dirname + '/src/templates/default.jade')
 
 app.use(logger('dev'))
 app.use(express.static(__dirname + '/static'))
 
 app.get('/', function (req, res, next) {
   try {
-    var html = template({
+    var html = outline({
         //todo: put in options.json
         title: 'Home',
         theme: 'yule',
@@ -26,7 +27,9 @@ app.get('/', function (req, res, next) {
             name: "phase",
             id: 0,
             rank: "Owner"
-        }
+        },
+        crumbs: 'Home >> Something',
+        page_contents: d({}),
     })
     res.send(html)
   } catch (e) {
