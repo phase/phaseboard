@@ -1,36 +1,27 @@
 var express = require('express')
   , logger = require('morgan')
+  , merge = require('merge')
+  , config = require('./config.json')
   , app = express()
   , outline = require('jade').compileFile(__dirname + '/src/templates/outline.jade')
-  , d = require('jade').compileFile(__dirname + '/src/templates/default.jade')
+  , test = require('jade').compileFile(__dirname + '/src/templates/default.jade')
 
 app.use(logger('dev'))
 app.use(express.static(__dirname + '/static'))
 
 app.get('/', function (req, res, next) {
   try {
-    var html = outline({
-        //todo: put in options.json
-        title: 'Home',
-        theme: 'yule',
-        meta: {
-            description: "This is some meta text",
-            keywords: "such board much wow"
-        },
-        infobox: {
-            title: "This is a title",
-            text: "todo: markdown parse this"
-        },
-        
+    var html = outline(merge(config, {
         //should be retrieve from somewhere
         user: {
             name: "phase",
             id: 0,
-            rank: "Owner"
+            rank: "Owner",
+            notifCount: 0
         },
         crumbs: 'Home >> Something',
-        page_contents: d({}),
-    })
+        page_contents: test({}),
+    }))
     res.send(html)
   } catch (e) {
     next(e)

@@ -1,0 +1,12 @@
+{
+    "title": "Home",
+    "theme": "yule",
+    "meta": {
+        "description": "This is some meta text",
+        "keywords": "such board much wow"
+    },
+    "infobox": {
+        "title": "This is a title",
+        "info": "todo: markdown parse this"
+    }
+}

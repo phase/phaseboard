@@ -30,11 +30,11 @@ html(lang='en')
                           th #{infobox.title}
                         tr
                           td.cell1.center
-                            | 03-26-16, 05:46 am — 
+                            | 03-26-16, 05:46 am &#8212; 
                             span#viewCount 327
                             |  views
                             br
-                            #{infobox.text}
+                            | !{infobox.info}
             tr.header1
               th#navBar
                 div(style='display:inline-block; float:right;')
@@ -56,8 +56,8 @@ html(lang='en')
                         a(href='/favorites') Favorites
                   #notifMenuContainer.dropdownContainer.noNotif
                     #notifMenuButton.navButton
-                      | Notifications
-                      span#notifCount 0
+                      | Notifications 
+                      span#notifCount #{user.notifCount}
                       i.icon-caret-down
                     ul#notifList.dropdownMenu
                   span.navButton
@@ -103,7 +103,7 @@ html(lang='en')
                           a(href='/') #{crumbs}
             tr
               td.contents-container
-                #{page_contents}
+                | !{page_contents}
             tr
               td.crumb-container
                 table.outline.breadcrumbs
@@ -121,7 +121,7 @@ html(lang='en')
                   tr
                     td(style='text-align: left;')
                       img(src='/img/poweredbyphase.png', style='float: left; margin-right: 3px;')
-                      | Blargboard · by phase
+                      | Phaseboard &#183; by phase
                       br
                       | Inspired by Acmlmboard and others
                       br
